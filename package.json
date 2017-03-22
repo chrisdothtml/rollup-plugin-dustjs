@@ -18,12 +18,15 @@
     "dustjs-linkedin": "^2.6.0"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
     "dustjs-linkedin": "^2.6.0",
+    "mocha": "^3.2.0",
     "rollup": "^0.41.6",
     "rollup-watch": "^3.2.2"
   },
   "scripts": {
     "build": "rollup -c",
-    "build-w": "rollup -c -w"
+    "build-w": "rollup -c -w",
+    "test": "rollup -c && mocha test/index.js"
   }
 }

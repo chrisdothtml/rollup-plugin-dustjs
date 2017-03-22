@@ -1,0 +1,4 @@
+<div>
+  {>"./child.dust" text="Heading" /}
+  <p>Body</p>
+</div>
