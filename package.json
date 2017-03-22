@@ -13,6 +13,11 @@
   "license": "MIT",
   "repository": "github:chrisdothtml/rollup-plugin-dustjs",
   "bugs": "https://github.com/chrisdothtml/rollup-plugin-dustjs/issues",
+  "files": [
+    "build/index.js",
+    "LICENSE",
+    "readme.md"
+  ],
   "main": "build/index.js",
   "peerDependencies": {
     "dustjs-linkedin": "^2.6.0"
