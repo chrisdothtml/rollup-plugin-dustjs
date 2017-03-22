@@ -28,6 +28,8 @@ export default {
 
 #### whitespace
 
+Preserves whitespace in templates
+
 Type: `Boolean`
 
 Default: `false`
