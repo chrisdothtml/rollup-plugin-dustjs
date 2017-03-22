@@ -18,7 +18,7 @@ function generateName (path) {
 
 function resolvePartials (source, parentPath) {
   const partials = []
-  const partialRegex = /\{>\s*"([^"]+)" *\/\}/g
+  const partialRegex = /\{>\s*"([^"]+)"[^\n]*\/\}/g
   const newSource = source.replace(partialRegex, (tag, relPath) => {
     if (extname(relPath) === '.dust') {
       const fullPath = getFullPath(parentPath, relPath)
