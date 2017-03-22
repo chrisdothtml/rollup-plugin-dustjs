@@ -1,27 +1,18 @@
-import md5 from 'md5'
 import dust, { compile } from 'dustjs-linkedin'
-import { basename, dirname, extname, resolve } from 'path'
+import { dirname, extname, resolve } from 'path'
+import { generateName, hash } from './utils.js'
 
-const { floor, random } = Math
-const token = floor(random() * 10000000)
-
-function getFullPath (from, to) {
-  return resolve(dirname(from), to)
-}
-
-function generateName (path) {
-  const name = basename(path, '.dust')
-  const hash = md5(token + path)
-
-  return `${name}-${hash}`
-}
-
+/**
+ * Finds all valid partials and replaces paths with respective
+ * unique template names
+ */
 function resolvePartials (source, parentPath) {
   const partials = []
+  // matches {>"./file.dust" /}
   const partialRegex = /\{>\s*"([^"]+)"[^\n]*\/\}/g
   const newSource = source.replace(partialRegex, (tag, relPath) => {
     if (extname(relPath) === '.dust') {
-      const fullPath = getFullPath(parentPath, relPath)
+      const fullPath = resolve(dirname(parentPath), relPath)
       const name = generateName(fullPath)
 
       partials.push(relPath)
