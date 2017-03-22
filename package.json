@@ -13,12 +13,14 @@
   ],
   "main": "build/index.js",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "build-w": "rollup -c -w"
   },
   "peerDependencies": {
     "dustjs-linkedin": "^2.7.5"
   },
   "devDependencies": {
-    "rollup": "^0.41.6"
+    "rollup": "^0.41.6",
+    "rollup-watch": "^3.2.2"
   }
 }
