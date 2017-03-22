@@ -4,6 +4,7 @@ export default {
   format: 'cjs',
   external: [
     'dustjs-linkedin',
+    'md5',
     'path'
   ]
 }

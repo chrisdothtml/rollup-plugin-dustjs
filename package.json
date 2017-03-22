@@ -19,7 +19,11 @@
   "peerDependencies": {
     "dustjs-linkedin": "^2.7.5"
   },
+  "dependencies": {
+    "md5": "^2.2.1"
+  },
   "devDependencies": {
+    "dustjs-linkedin": "^2.7.5",
     "rollup": "^0.41.6",
     "rollup-watch": "^3.2.2"
   }
