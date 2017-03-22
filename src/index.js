@@ -1,5 +1,5 @@
 import md5 from 'md5'
-import { compile } from 'dustjs-linkedin'
+import dust, { compile } from 'dustjs-linkedin'
 import { basename, dirname, extname, resolve } from 'path'
 
 const { floor, random } = Math
@@ -37,8 +37,11 @@ function resolvePartials (source, parentPath) {
   }
 }
 
-// TODO: options
-export default function dustjs () {
+export default function dustjs (options = {}) {
+  if (options.whitespace === true) {
+    dust.config.whitespace = true
+  }
+
   return {
     name: 'dustjs',
     transform (source, path) {
