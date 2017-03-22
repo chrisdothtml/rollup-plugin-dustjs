@@ -1,6 +1,6 @@
 # rollup-plugin-dustjs
 
-> A rollup plugin for importing dustjs templates as modules
+> A [rollup](https://github.com/rollup/rollup) plugin for importing dustjs templates as modules
 
 ## Install
 
@@ -28,9 +28,9 @@ export default {
 
 #### whitespace
 
-Default: `false`
-
 Type: `Boolean`
+
+Default: `false`
 
 ## Use
 
