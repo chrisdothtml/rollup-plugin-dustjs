@@ -1,0 +1,24 @@
+{
+  "name": "rollup-plugin-dustjs",
+  "version": "0.0.1",
+  "description": "A rollup plugin for importing dustjs templates as modules",
+  "license": "MIT",
+  "author": "Chris Deacy <chris@deacy.io>",
+  "keywords": [
+    "dustjs",
+    "dustjs-linkedin",
+    "rollup",
+    "rollup-plugin",
+    "templates"
+  ],
+  "main": "build/index.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "peerDependencies": {
+    "dustjs-linkedin": "^2.7.5"
+  },
+  "devDependencies": {
+    "rollup": "^0.41.6"
+  }
+}
