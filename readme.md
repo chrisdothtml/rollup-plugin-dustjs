@@ -61,3 +61,7 @@ render(main, {}, (error, output) => {
 ```
 <h1>My heading</h1>
 ```
+
+## License
+
+[MIT](LICENSE)
