@@ -6,7 +6,7 @@ const token = floor(random() * 10000000)
 /*
  * http://werxltd.com/wp/2010/05/13/javascript-implementation-of-javas-string-hashcode-method/
  */
-export function hash (input) {
+function hash (input) {
   let hash = 0
 
   if (input.length) {

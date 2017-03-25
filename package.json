@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-dustjs",
-  "version": "0.0.1",
+  "version": "0.0.2-pre",
   "author": "Chris Deacy <chris@deacy.io>",
   "description": "A rollup plugin for importing dustjs templates as modules",
   "keywords": [

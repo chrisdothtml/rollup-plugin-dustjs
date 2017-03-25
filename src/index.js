@@ -1,6 +1,6 @@
 import dust, { compile } from 'dustjs-linkedin'
 import { dirname, extname, resolve } from 'path'
-import { generateName, hash } from './utils.js'
+import { generateName } from './utils.js'
 
 /**
  * Finds all valid partials and replaces paths with respective
