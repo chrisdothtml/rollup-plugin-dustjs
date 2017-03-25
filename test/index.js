@@ -1,3 +1,5 @@
+/* eslint-env mocha */
+
 const dustjs = require('../build/index.js')
 const { expect } = require('chai')
 const { rollup } = require('rollup')
@@ -7,7 +9,7 @@ const { join } = require('path')
  * Runs provided source code as a node module
  */
 function runAsModule (source) {
-  const run = new Function('module', 'exports', 'require', source)
+  const run = new Function('module', 'exports', 'require', source) // eslint-disable-line no-new-func
   const module = {
     exports: {}
   }
@@ -24,7 +26,7 @@ function runTestCase (name, options = {}) {
       plugins: [dustjs(options)]
     },
     generate: {
-      format: 'cjs',
+      format: 'cjs'
     }
   }
 
